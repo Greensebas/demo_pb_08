@@ -11,7 +11,8 @@ const PORT = process.env.PORT || 8080;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public")); //Si comentamos esto y descomentamos lo otro deberian andar todos los css (también hay que cambiar el nombre de la carpeta public a nav-app)
-app.use(loggerMiddleware);
+// app.use(loggerMiddleware);  Ahora está puesto a nivel de router en products
+
 
 /*
 app.get("/", (req, res) => {

@@ -1,9 +1,11 @@
 const express = require ("express");
 const { products } = require('../../data/data');
+const loggerMiddleware = require('../../middlewares/logger')
 
 const router = express.Router();
 
 //Middlewares
+router.use(loggerMiddleware);
 
 //Routes
   router.get('/', (req, res) => {
